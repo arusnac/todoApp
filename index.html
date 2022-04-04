@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Todo</title>
+  <link rel="stylesheet" href="assets/styles/app.css" />
+  <script src="assets/scripts/app.js" defer></script>
+  <!-- <script src="assets/scripts/connect.js" defer></script> -->
+</head>
+
+<body>
+  <div id="backdrop"></div>
+  <div class="modal" id="add-modal">
+    <div class="modal__content">
+      <label for="title">Activity</label>
+      <input type="text" name="title" id="title" />
+      <label for="priority">Priority</label>
+      <input type="number" step="1" max="5" min="1" name="priority" id="priority" />
+      <label for="date">Date</label>
+      <input type="datetime-local" name="date" id="date" />
+    </div>
+    <div class="modal__actions">
+      <button class="btn btn--passive">Cancel</button>
+      <button class="btn btn--success">Add</button>
+    </div>
+  </div>
+  <div class="modal" id="delete-modal">
+    <h2 class="modal__title">Are you sure?</h2>
+    <p class="modal__content">
+      Are you sure you want to delete this item? This action can't be made
+      undone!
+    </p>
+    <div class="modal__actions">
+      <button class="btn btn--passive">No (Cancel)</button>
+      <button class="btn btn--danger">Yes</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>Todo</h1>
+    <button>ADD TODO</button>
+  </header>
+
+  <main>
+    <section id="entry-text" class="card">
+      <p>Your personal todos!</p>
+    </section>
+    <ul id="movie-list"></ul>
+  </main>
+</body>
+
+</html>
